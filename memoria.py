@@ -34,9 +34,9 @@ def game(machine_word):
                 if correct == 3:
                     print("Felicidades ganaste este juego")
                 else:
-                    show_word()
+                    game(show_word())
             else:
-                show_word()
+                game(show_word())
         else:
            game(show_word())
     else:
@@ -46,7 +46,7 @@ def game(machine_word):
             if strike == 3:
                 print("Reiniciando juego")
             else:
-                show_word()
+                game(show_word())
         else:
             level =- 1
             strike =+ 1
@@ -54,7 +54,7 @@ def game(machine_word):
             if strike == 3:
                 print("Reiniciando juego")
             else:
-                show_word()
+                game(show_word())
     
 
 if __name__ == '__main__':
